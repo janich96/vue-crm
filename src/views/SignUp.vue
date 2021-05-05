@@ -1,17 +1,17 @@
 <template>
   <form class="registerForm" action="" method="post" enctype="multipart/form-data">
     <div>
-      <label for="surname">Фамилия</label>
+      <label for="surname">Фамилия*</label>
       <input v-model="surname" id="surname" placeholder="Фамилия" required>
-      <label for="name">Имя</label>
+      <label for="name">Имя*</label>
       <input v-model="name" id="name" placeholder="Имя" required>
       <label for="fatherName">Отчество</label>
       <input v-model="fatherName" id="fatherName" placeholder="Отчество">
     </div>
     <div>
-      <label for="birthday">Дата рождения</label>
+      <label for="birthday">Дата рождения*</label>
       <input type="date" v-model="birthday" id="birthday" required>
-      <label for="phone">Телефон</label>
+      <label for="phone">Номер телефона*</label>
       <input type="tel" v-model="phone" id="phone" pattern="8[0-9]{10}" placeholder="79991234567" required>
     </div>
     <div>
@@ -22,7 +22,7 @@
       <label for="female">Женский</label>
     </div>
     <div>
-      <label for="clientType">Группа клиентов</label>
+      <label for="clientType">Группа клиентов*</label>
       <select class="clientType" v-model="clientType" name="clientType" multiple required>
         <option value="vip">VIP</option>
         <option value="problem">Проблемный</option>
@@ -38,7 +38,7 @@
       </select>
     </div>
     <div>
-      <label for="sms">Не отправлять смс</label>
+      <label for="sms">Не отправлять СМС</label>
       <input type="checkbox" v-model="sms" name="sms">
     </div>
     <p class="adress">Адрес</p>
@@ -51,7 +51,7 @@
       <input type="text" v-model="region" name="region" placeholder="Область">
     </div>
     <div>
-      <label for="city">Город</label>
+      <label for="city">Город*</label>
       <input type="text" v-model="city" name="city" placeholder="Город" required>
       <label for="street">Улица</label>
       <input type="text" v-model="street" name="street" placeholder="Улица">
@@ -60,7 +60,7 @@
     </div>
     <p class="docs">Паспорт</p>
     <div>
-      <label for="docType">Тип документа</label>
+      <label for="docType">Тип документа*</label>
       <select class="docType" v-model="docType" name="docType" required>
         <option value="passport">Паспорт</option>
         <option value="birthCertificate">Свидетельство о рождении</option>
@@ -76,10 +76,11 @@
     <div>
       <label for="issuedBy">Кем выдан</label>
       <input type="text" v-model="issuedBy" name="issuedBy" placeholder="Кем выдан">
-      <label for="issueDate">Дата выдачи</label>
+      <label for="issueDate">Дата выдачи*</label>
       <input type="date" v-model="issueDate" name="issueDate" required>
     </div>
     <p class="required">*Поле обязательное для заполнения</p>
+    <button type="submit" name="submit">Отправить</button>
   </form>
 </template>
 
